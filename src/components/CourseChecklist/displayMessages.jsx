@@ -28,7 +28,7 @@ const messages = defineMessages({
   },
   certificateShortDescription: {
     id: 'certificateShortDescription',
-    defaultMessage: 'Enable Your Certificate',
+    defaultMessage: 'Enable Your Certificate Customisation',
     description: 'Label for a section that describes a certificate for completing a course',
   },
   certificateLongDescription: {
