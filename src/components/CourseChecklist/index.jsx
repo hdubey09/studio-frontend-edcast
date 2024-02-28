@@ -168,6 +168,11 @@ class CourseChecklist extends React.Component {
 
   getListItems = () => (
     this.state.checks.map((check) => {
+
+      if (check.id === 'certificates') {
+        return null;
+      }
+
       const isCompleted = this.isCheckCompleted(check.id);
       const shouldShowCommentSection = this.shouldShowCommentSection(check.id);
 
@@ -195,7 +200,7 @@ class CourseChecklist extends React.Component {
           {shouldShowCommentSection ? this.getCommentSection(check.id) : null}
         </div>
       );
-    })
+    }).filter(item => item !== null)
   );
 
   getCommentSectionIcon = () => (
